@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="project" default="data_recorder"/>
+    <node pkg="$(arg project)" type="vins_recorder" name="vins_recorder" output="screen" respawn="false">
+      <param name="bag_path" value="/workspace/vins.bag"/>
+    </node>
+</launch>
